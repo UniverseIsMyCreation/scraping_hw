@@ -2,7 +2,7 @@
 
 set -eu
 
-mkdir ./real_results/
+mkdir -p ./real_results/
 echo "Running parser implementation "
 cur_user=$(whoami)
 timeout 1200 ./scripts/run.sh http://localhost/wiki/Чемпионат_Европы_по_футболу_2024 ./real_results/result.jsonl
