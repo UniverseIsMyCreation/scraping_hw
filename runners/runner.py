@@ -54,10 +54,9 @@ class SimpleRunner:
         while self._to_process:
             # достаем url
             item = self._to_process.popleft()
-            result, next = self._download(item)
             try:
                 # извлечение контента и ссылок на другие сайты
-                pass
+                result, next = self._download(item)
             except Exception as e:
                 # увелечение кол-ва попыток на чтение запроса
                 item.tries += 1
